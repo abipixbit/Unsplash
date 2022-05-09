@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 import com.example.splashexample.R
 import com.google.android.material.snackbar.Snackbar
 
-fun View.glider(url : String, imageView: ImageView) {
+fun Context.glider(url : String, imageView: ImageView) {
     Glide.with(this)
         .load(url)
         .placeholder(R.drawable.unsplash)
