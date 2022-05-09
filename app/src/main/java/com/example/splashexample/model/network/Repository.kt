@@ -17,7 +17,7 @@ class Repository {
 
     fun loadImage() : MutableLiveData<List<UnsplashDataResponse.UnsplashDataResponseItem>> {
 
-    RetrofitObject.getRetrofit().getPhotos().enqueue(object : Callback<List<UnsplashDataResponse.UnsplashDataResponseItem>?> {
+    RetrofitObject.getRetrofit().getPhotos((1..10).random()).enqueue(object : Callback<List<UnsplashDataResponse.UnsplashDataResponseItem>?> {
         override fun onResponse(
             call: Call<List<UnsplashDataResponse.UnsplashDataResponseItem>?>,
             response: Response<List<UnsplashDataResponse.UnsplashDataResponseItem>?>
